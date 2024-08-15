@@ -10,6 +10,7 @@ An advanced tool designed for efficiently testing and verifying the functionalit
 - Configure the number of test attempts per proxy
 - Customizable timeout settings
 - Concurrent testing for faster results
+- Built-in proxy loader/saver
 - User-friendly CLI interface with colored output
 - Saves working proxies to a file for easy reuse
 
@@ -66,3 +67,7 @@ You can modify the following settings through the tool's interface:
 - Timeout: Maximum time (in seconds) to wait for a proxy response
 - Default URL: The URL used for testing proxies
 - Mode: HTTP or HTTPS
+
+## Stats
+
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2FPoppingXanax%2Fproxychecker&count_bg=%2300CE9E&title_bg=%234308D7&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
