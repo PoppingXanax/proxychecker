@@ -6,22 +6,63 @@ An advanced tool designed for efficiently testing and verifying the functionalit
 
 ## Features
 
-- **Concurrent Proxy Testing**
-- **Detailed Error Reporting**
-- **Success Rate Calculation**
-- **Supports HTTP and HTTPS Proxies**
+- Test HTTP and HTTPS proxies
+- Configure the number of test attempts per proxy
+- Customizable timeout settings
+- Concurrent testing for faster results
+- User-friendly CLI interface with colored output
+- Saves working proxies to a file for easy reuse
+
+## Prerequisites
+
+- Go 1.16 or higher
 
 ## Installation
 
-Follow the steps below to install and set up the tool:
+1. Clone the repository:
+   `git clone https://github.com/PoppingXanax/proxychecker.git`
+   `cd proxychecker`
+3. Install dependencies:
+   `go mod tidy`
 
-### Prerequisites
+## Usage
 
-- **Go**: Ensure that [Go](https://golang.org/dl/) is installed on your system.
+1. Create a file named `proxies.txt` in the same directory as the tool, and add your proxies, one per line. For example:
+   ```
+   192.168.1.1:8080
+   10.0.0.1:3128
+   proxy.example.com:8000
+   ```
+2. Run the tool:
+- On Windows:
+  ```
+  go run checker.go
+  ```
+- On Mac/Linux:
+  ```
+  go run checker.go
+  ```
 
-### Steps to Install
+3. Follow the on-screen prompts to test your proxies.
 
-**Clone the Repository**
+## Building the Tool
 
-```bash
-   git clone https://github.com/yourusername/your-repo-name.git
+To create an executable for your specific platform:
+
+- On Windows:
+  `go build -o proxychecker.exe checker.go`
+- On Mac/Linux:
+  `go build -o proxychecker main.go`
+
+After building, you can run the tool using:
+- Windows: `.\proxy-checker.exe`
+- Mac/Linux: `./proxy-checker`
+
+## Configuration
+
+You can modify the following settings through the tool's interface:
+
+- Max Workers: Number of concurrent workers for proxy testing
+- Timeout: Maximum time (in seconds) to wait for a proxy response
+- Default URL: The URL used for testing proxies
+- Mode: HTTP or HTTPS
